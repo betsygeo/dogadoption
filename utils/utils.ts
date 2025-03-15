@@ -23,4 +23,7 @@ export const fetchDogbyBreed = async (breed: string): Promise<string | null> => 
   }
 };
 
-
+export const encodedRedirect = (url: string) => {
+  const encodedUrl = encodeURIComponent(url);
+  window.location.href = `https://example.com/redirect?to=${encodedUrl}`;
+};
